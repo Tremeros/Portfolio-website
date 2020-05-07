@@ -1,0 +1,15 @@
+$primaryColor: #345;
+$color1: #0009;
+$secondaryColor: #11998e;
+$thirdColor: #38ef7d;
+$fourthColor: #00fa9a;
+
+$show-home-image: true;
+$home-image: url("../img/mainBanner.jpg");
+$background-opacity: 0.9;
+
+$buttonGradient: linear-gradient(
+  to bottom,
+  $primaryColor 5%,
+  $secondaryColor 100%
+);
