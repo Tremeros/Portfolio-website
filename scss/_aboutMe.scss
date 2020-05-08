@@ -1,0 +1,59 @@
+.about-info {
+  display: grid;
+  grid-template-areas:
+    "bio-image bio bio"
+    "skills skills skills";
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px;
+}
+
+.bio-image {
+  grid-area: bio-image;
+  background: $portrait;
+  margin: auto;
+  width: 330px;
+  height: 330px;
+  border: 2px solid $secondaryColor;
+  border-radius: 50%;
+  background-position: left top;
+  background-size: cover;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  transition: 2s;
+}
+
+.bio {
+  grid-area: bio;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.skills {
+  grid-area: skills;
+  height: 190px;
+  display: flex;
+  justify-content: space-around;
+  img {
+    width: 200px;
+    transition: 0.5s;
+  }
+}
+
+#footer {
+  text-align: center;
+  padding: 1rem;
+  background: darken($primaryColor, 10);
+}
+.sm-heading-about {
+  margin-bottom: 2rem;
+  padding: 0.2rem 1rem;
+  background: rgba(lighten($primaryColor, 2), 0.5);
+
+  border-right: solid 3px rgba(0, 255, 0, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+
+  animation: animated-text-about 5s steps(37, end) 1s 1 normal both,
+    animated-cursor 500ms steps(37, end) infinite;
+}

@@ -3,7 +3,16 @@
     width: 0;
   }
   to {
-    width: 920px;
+    width: 960px;
+  }
+}
+
+@keyframes animated-text-about {
+  from {
+    width: 0;
+  }
+  to {
+    width: 340px;
   }
 }
 

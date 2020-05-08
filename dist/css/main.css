@@ -58,7 +58,10 @@
       background: url("../img/me3.jpg");
       background-position: top;
       border-radius: 50%;
-      border: 5px solid #11998e; }
+      border: 5px solid #11998e;
+      -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+      box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75); }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
     transition: all 1.5s ease-out; }
@@ -132,7 +135,13 @@
   from {
     width: 0; }
   to {
-    width: 920px; } }
+    width: 960px; } }
+
+@keyframes animated-text-about {
+  from {
+    width: 0; }
+  to {
+    width: 340px; } }
 
 /* cursor animations */
 @keyframes animated-cursor {
@@ -178,6 +187,55 @@
   100% {
     opacity: 0; } }
 
+.about-info {
+  display: grid;
+  grid-template-areas: "bio-image bio bio" "skills skills skills";
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px; }
+
+.bio-image {
+  grid-area: bio-image;
+  background: url("../img/me3.jpg");
+  margin: auto;
+  width: 330px;
+  height: 330px;
+  border: 2px solid #11998e;
+  border-radius: 50%;
+  background-position: left top;
+  background-size: cover;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  transition: 2s; }
+
+.bio {
+  grid-area: bio;
+  font-size: 1.5rem;
+  font-weight: 500; }
+
+.skills {
+  grid-area: skills;
+  height: 190px;
+  display: flex;
+  justify-content: space-around; }
+  .skills img {
+    width: 200px;
+    transition: 0.5s; }
+
+#footer {
+  text-align: center;
+  padding: 1rem;
+  background: #202b35; }
+
+.sm-heading-about {
+  margin-bottom: 2rem;
+  padding: 0.2rem 1rem;
+  background: rgba(55, 73, 91, 0.5);
+  border-right: solid 3px rgba(0, 255, 0, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+  animation: animated-text-about 5s steps(37, end) 1s 1 normal both, animated-cursor 500ms steps(37, end) infinite; }
+
 @media screen and (max-width: 768px) {
   main {
     align-items: center;
@@ -203,7 +261,10 @@
     transform: translate3d(100%, 0, 0); }
   .portrait {
     width: 150px;
-    height: 150px; } }
+    height: 150px; }
+  .about-info {
+    grid-template-areas: "bio-image" "bio" "skills";
+    grid-template-columns: 1fr; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
@@ -221,7 +282,7 @@ body {
   color: white;
   height: 100%;
   margin: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Raleway", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
   body#bg-img {
     background: url("../img/mainBanner.jpg");
@@ -245,8 +306,7 @@ h3 {
   h1.lg-heading,
   h2.lg-heading,
   h3.lg-heading {
-    font-size: 6rem;
-    margin-bottom: 0.5rem; }
+    font-size: 6rem; }
   h1.sm-heading,
   h2.sm-heading,
   h3.sm-heading {
@@ -283,7 +343,7 @@ header {
 
 main {
   padding: 4rem;
-  height: 100%; }
+  min-height: calc(100vh - 60px); }
   main .main-line {
     height: 2px;
     width: 85vw;
