@@ -24,6 +24,15 @@
     width: 349px;
   }
 }
+
+@keyframes animated-text-contact {
+  from {
+    width: 0;
+  }
+  to {
+    width: 425px;
+  }
+}
 /* cursor animations */
 
 @keyframes animated-cursor {

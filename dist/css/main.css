@@ -16,6 +16,12 @@
   to {
     width: 349px; } }
 
+@keyframes animated-text-contact {
+  from {
+    width: 0; }
+  to {
+    width: 425px; } }
+
 /* cursor animations */
 @keyframes animated-cursor {
   from {
@@ -279,6 +285,40 @@
   white-space: nowrap;
   overflow: hidden;
   animation: animated-text-projects 5s steps(37, end) 1s 1 normal both, animated-cursor 500ms steps(37, end) infinite; }
+
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 3rem; }
+  .boxes div {
+    font-size: 2rem; }
+
+.contact-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .contact-icons a {
+    margin-top: 1.5rem; }
+    .contact-icons a:first-child {
+      color: #839ccf; }
+    .contact-icons a:nth-child(2) {
+      color: #2867b2; }
+    .contact-icons a:nth-child(3) {
+      color: #818f9d;
+      -webkit-box-reflect: below 1px linear-gradient(transparent, #0005); }
+  .contact-icons span {
+    font-size: 2rem; }
+
+.sm-heading-contact {
+  margin-bottom: 2rem;
+  padding: 0.2rem 2.5;
+  background: rgba(55, 73, 91, 0.5);
+  border-right: solid 3px rgba(0, 255, 0, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+  animation: animated-text-contact 5s steps(37, end) 1s 1 normal both, animated-cursor 500ms steps(37, end) infinite; }
 
 @media screen and (max-width: 768px) {
   main {
