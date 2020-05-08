@@ -3,6 +3,10 @@ $color1: #0009;
 $secondaryColor: #11998e;
 $thirdColor: #38ef7d;
 $fourthColor: #00fa9a;
+$lineGradient: radial-gradient(
+  rgba($secondaryColor, 1),
+  rgba($secondaryColor, 0)
+);
 
 $show-home-image: true;
 $home-image: url("../img/mainBanner.jpg");

@@ -68,10 +68,9 @@ main {
     width: 50vw;
     margin-bottom: 1.5rem;
     border-radius: 30px;
-    background: radial-gradient(
-      rgba($secondaryColor, 1),
-      rgba($secondaryColor, 0)
-    );
+    background: $thirdColor;
+    box-shadow: 0 0 5px $thirdColor, 0 0 25px $thirdColor, 0 0 50px $thirdColor,
+      0 0 200px $thirdColor;
     z-index: 3;
   }
 
@@ -93,10 +92,95 @@ main {
     overflow: hidden;
 
     h1 {
-      margin-top: 20vh;
+      margin-top: 10vh;
       background: -webkit-linear-gradient(white, #c0c0c0);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
   }
+}
+
+.html {
+  position: absolute;
+  top: 600px;
+  right: 1650px;
+  font-size: 3rem;
+  color: $secondaryColor;
+  opacity: 0;
+  text-shadow: 0 0 5px $secondaryColor, 0 0 25px $secondaryColor,
+    0 0 50px $secondaryColor, 0 0 200px $secondaryColor;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+
+  animation: textAnimation 15s 5s linear infinite;
+}
+
+.css {
+  position: absolute;
+  top: 800px;
+  right: 1400px;
+  font-size: 3.5rem;
+  color: dodgerblue;
+  opacity: 0;
+  text-shadow: 0 0 5px dodgerblue, 0 0 25px dodgerblue, 0 0 50px dodgerblue,
+    0 0 200px dodgerblue;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+
+  animation: textAnimation 10s 10s linear infinite;
+}
+
+.javascript {
+  position: absolute;
+  top: 710px;
+  right: 570px;
+  font-size: 2.5rem;
+  color: yellow;
+  opacity: 0;
+  text-shadow: 0 0 5px yellow, 0 0 25px yellow, 0 0 50px yellow,
+    0 0 200px yellow;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+  animation: textAnimation 7s 20s linear infinite;
+}
+
+.nodejs {
+  position: absolute;
+  top: 580px;
+  right: 900px;
+  font-size: 4rem;
+  color: $thirdColor;
+  opacity: 0;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+  text-shadow: 0 0 5px $thirdColor, 0 0 25px $thirdColor, 0 0 50px $thirdColor,
+    0 0 200px $thirdColor;
+
+  animation: textAnimation 50s 3s linear infinite;
+}
+
+.react {
+  position: absolute;
+  top: 530px;
+  right: 110px;
+  font-size: 3.1rem;
+  color: #60dafb;
+  opacity: 0;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+
+  text-shadow: 0 0 5px #60dafb, 0 0 25px #60dafb, 0 0 50px #60dafb,
+    0 0 200px #60dafb;
+
+  animation: textAnimation 35s 10s linear infinite;
+}
+
+.redux {
+  position: absolute;
+  top: 800px;
+  right: 340px;
+  font-size: 2rem;
+  color: rgb(126, 51, 221);
+  opacity: 0;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+
+  text-shadow: 0 0 5px rgb(126, 51, 221), 0 0 25px rgb(126, 51, 221),
+    0 0 50px rgb(126, 51, 221), 0 0 200px rgb(126, 51, 221);
+
+  animation: textAnimation 25s 35s linear infinite;
 }
