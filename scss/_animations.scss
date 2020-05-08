@@ -3,7 +3,7 @@
     width: 0;
   }
   to {
-    width: 960px;
+    width: 940px;
   }
 }
 
@@ -12,10 +12,18 @@
     width: 0;
   }
   to {
-    width: 340px;
+    width: 320px;
   }
 }
 
+@keyframes animated-text-projects {
+  from {
+    width: 0;
+  }
+  to {
+    width: 349px;
+  }
+}
 /* cursor animations */
 
 @keyframes animated-cursor {

@@ -1,8 +1,9 @@
 @import "variables.scss";
 @import "mixins.scss";
-@import "menu.scss";
 @import "animations.scss";
+@import "menu.scss";
 @import "aboutMe.scss";
+@import "projects.scss";
 @import "mobile.scss";
 
 * {
@@ -33,7 +34,7 @@ h3 {
 
   &.sm-heading {
     margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
+    padding: 0.2rem 0;
     background: rgba(lighten($primaryColor, 2), 0.5);
 
     border-right: solid 3px rgba(0, 255, 0, 0.75);

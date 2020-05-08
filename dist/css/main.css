@@ -1,3 +1,65 @@
+@keyframes animated-text {
+  from {
+    width: 0; }
+  to {
+    width: 940px; } }
+
+@keyframes animated-text-about {
+  from {
+    width: 0; }
+  to {
+    width: 320px; } }
+
+@keyframes animated-text-projects {
+  from {
+    width: 0; }
+  to {
+    width: 349px; } }
+
+/* cursor animations */
+@keyframes animated-cursor {
+  from {
+    border-right-color: rgba(0, 255, 0, 0.75); }
+  to {
+    border-right-color: transparent; } }
+
+@keyframes animate1 {
+  0% {
+    left: -100%; }
+  50%,
+  100% {
+    left: 100%; } }
+
+@keyframes animate2 {
+  0% {
+    top: -100%; }
+  50%,
+  100% {
+    top: 100%; } }
+
+@keyframes animate3 {
+  0% {
+    right: -100%; }
+  50%,
+  100% {
+    right: 100%; } }
+
+@keyframes animate4 {
+  0% {
+    bottom: -100%; }
+  50%,
+  100% {
+    bottom: 100%; } }
+
+@keyframes textAnimation {
+  0% {
+    opacity: 0; }
+  50% {
+    opacity: 1; }
+  75%,
+  100% {
+    opacity: 0; } }
+
 .menu-btn {
   position: absolute;
   z-index: 3;
@@ -131,62 +193,6 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
-@keyframes animated-text {
-  from {
-    width: 0; }
-  to {
-    width: 960px; } }
-
-@keyframes animated-text-about {
-  from {
-    width: 0; }
-  to {
-    width: 340px; } }
-
-/* cursor animations */
-@keyframes animated-cursor {
-  from {
-    border-right-color: rgba(0, 255, 0, 0.75); }
-  to {
-    border-right-color: transparent; } }
-
-@keyframes animate1 {
-  0% {
-    left: -100%; }
-  50%,
-  100% {
-    left: 100%; } }
-
-@keyframes animate2 {
-  0% {
-    top: -100%; }
-  50%,
-  100% {
-    top: 100%; } }
-
-@keyframes animate3 {
-  0% {
-    right: -100%; }
-  50%,
-  100% {
-    right: 100%; } }
-
-@keyframes animate4 {
-  0% {
-    bottom: -100%; }
-  50%,
-  100% {
-    bottom: 100%; } }
-
-@keyframes textAnimation {
-  0% {
-    opacity: 0; }
-  50% {
-    opacity: 1; }
-  75%,
-  100% {
-    opacity: 0; } }
-
 .about-info {
   display: grid;
   grid-template-areas: "bio-image bio bio" "skills skills skills";
@@ -229,12 +235,50 @@
 
 .sm-heading-about {
   margin-bottom: 2rem;
-  padding: 0.2rem 1rem;
+  padding: 0.2rem 0;
   background: rgba(55, 73, 91, 0.5);
   border-right: solid 3px rgba(0, 255, 0, 0.75);
   white-space: nowrap;
   overflow: hidden;
   animation: animated-text-about 5s steps(37, end) 1s 1 normal both, animated-cursor 500ms steps(37, end) infinite; }
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7rem; }
+  .projects img {
+    width: 100%;
+    border: 3px solid #11998e;
+    z-index: 3; }
+    .projects img:hover {
+      opacity: 0.2;
+      border-color: dodgerblue;
+      transition: all 1.5s ease-out; }
+
+.btn, .btn-dark, .btn-light {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-light:hover {
+    background: dodgerblue; }
+
+.btn-dark {
+  background: black;
+  color: #fff; }
+
+.btn-light {
+  background: #b5c4d2;
+  color: #333; }
+
+.sm-heading-projects {
+  margin-bottom: 2rem;
+  padding: 0.2rem 2.5;
+  background: rgba(55, 73, 91, 0.5);
+  border-right: solid 3px rgba(0, 255, 0, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+  animation: animated-text-projects 5s steps(37, end) 1s 1 normal both, animated-cursor 500ms steps(37, end) infinite; }
 
 @media screen and (max-width: 768px) {
   main {
@@ -264,7 +308,9 @@
     height: 150px; }
   .about-info {
     grid-template-areas: "bio-image" "bio" "skills";
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .projects {
+    grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
@@ -272,7 +318,9 @@
   h1 {
     font-size: 4.5rem; }
   .main-line {
-    width: 50vw; } }
+    width: 50vw; }
+  .projects {
+    grid-template-columns: 1fr; } }
 
 * {
   box-sizing: border-box; }
@@ -311,7 +359,7 @@ h3 {
   h2.sm-heading,
   h3.sm-heading {
     margin-bottom: 2rem;
-    padding: 0.2rem 1rem;
+    padding: 0.2rem 0;
     background: rgba(55, 73, 91, 0.5);
     border-right: solid 3px rgba(0, 255, 0, 0.75);
     white-space: nowrap;

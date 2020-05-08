@@ -59,6 +59,10 @@
 
     grid-template-columns: 1fr;
   }
+
+  .projects {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 // Smartphones
@@ -74,5 +78,9 @@
 
   .main-line {
     width: 50vw;
+  }
+
+  .projects {
+    grid-template-columns: 1fr;
   }
 }

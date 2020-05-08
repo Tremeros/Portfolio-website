@@ -1,0 +1,53 @@
+.projects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 0.7rem;
+
+  img {
+    width: 100%;
+    border: 3px solid $secondaryColor;
+    z-index: 3;
+
+    &:hover {
+      opacity: 0.2;
+      border-color: dodgerblue;
+      @include easeOut;
+    }
+  }
+}
+
+.btn {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem;
+
+  &:hover {
+    background: dodgerblue;
+  }
+}
+
+.btn-dark {
+  @extend .btn;
+  background: darken($primaryColor, 50);
+  color: #fff;
+}
+
+.btn-light {
+  @extend .btn;
+  background: lighten($primaryColor, 50);
+  color: #333;
+}
+
+.sm-heading-projects {
+  margin-bottom: 2rem;
+  padding: 0.2rem 2.5;
+  background: rgba(lighten($primaryColor, 2), 0.5);
+
+  border-right: solid 3px rgba(0, 255, 0, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+
+  animation: animated-text-projects 5s steps(37, end) 1s 1 normal both,
+    animated-cursor 500ms steps(37, end) infinite;
+}
