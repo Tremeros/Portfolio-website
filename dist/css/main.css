@@ -324,43 +324,52 @@
   main {
     align-items: center;
     text-align: center; }
-    main .lg-heading {
-      line-height: 1;
-      margin-bottom: 1rem; }
-  .sm-heading {
-    display: none; }
-  ul.meu-nav,
+  main .lg-heading {
+    line-height: 1;
+    margin-bottom: 1rem; }
+  ul.menu-nav,
   div.menu-branding {
     float: none;
     width: 100%;
     min-height: 0; }
-    ul.meu-nav.show,
-    div.menu-branding.show {
-      transform: translate3d(0, 0, 0); }
+  ul.menu-nav.show,
+  div.menu-branding.show {
+    transform: translate3d(0, 0, 0); }
   .menu-nav {
     height: 75vh;
-    transform: translate3d(-100%, 0, 0); }
-  .meu-branding {
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
     height: 25vh;
     transform: translate3d(100%, 0, 0); }
-  .portrait {
+  .menu-branding .portrait {
+    background: url("../img/portrait_small.jpg");
     width: 150px;
     height: 150px; }
   .about-info {
-    grid-template-areas: "bio-image" "bio" "skills";
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 100vh; }
-  h1 {
-    font-size: 4.5rem; }
-  .main-line {
-    width: 50vw; }
+  main {
+    padding: 2rem; }
+  main #home h1 {
+    margin-top: 10vh; }
+  main .lg-heading {
+    margin-top: 1rem;
+    font-size: 5rem; }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .menu-branding {
+    height: 25vh;
+    transform: translate3d(100%, 0, 0); }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr;
+    width: 100vw; } }
 
 * {
   box-sizing: border-box; }
@@ -368,7 +377,8 @@
 body {
   background: #345;
   color: white;
-  height: 100%;
+  height: 100vh;
+  width: 100vw;
   margin: 0;
   font-family: "Raleway", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
